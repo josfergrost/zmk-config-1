@@ -39,12 +39,12 @@ layers:
   - '3'
   - KP DOT
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-command$$
+  - {t: ▽, type: trans}
   - {type: held}
-  - ␣
-  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ADJ
-  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
   RAI:
   - '~'
   - F1
@@ -82,12 +82,12 @@ layers:
   - ⏯
   - '|'
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-command$$
+  - {t: ▽, type: trans}
   - ADJ
-  - ␣
-  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
   ADJ:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -125,9 +125,9 @@ layers:
   - →
   - Insert
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-command$$
+  - {t: ▽, type: trans}
   - {type: held}
-  - ␣
-  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - $$mdi:apple-keyboard-option$$
+  - {t: ▽, type: trans}
