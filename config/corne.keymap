@@ -4,15 +4,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    // Definición de Macros para Backend
     macros {
-        // Macro para Copiar (Ctrl + C)
         m_copy: m_copy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp C>, <&macro_release &kp LCTRL>;
         };
-        // Macro para Pegar (Ctrl + V)
         m_paste: m_paste {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -25,7 +22,6 @@
 
         default_layer {
             display-name = "BAS";
-            // Lado Izquierdo: Shift arriba, Ctrl abajo. Caps Lock en la esquina derecha.
             bindings = <
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
@@ -36,10 +32,9 @@
 
         lower_layer {
             display-name = "LOW";
-            // Lado Izq: Símbolos de programación ({ } [ ] ( ) < > = !). 
-            // Lado Der: Teclado numérico estilo Numlock (U=7, J=4, M=1).
+            // Mano IZQ: Simbolos. Mano DER: Teclado Numérico + Guiones (P y [).
             bindings = <
-&kp TAB    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR     &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS  &kp BSPC
+&kp TAB    &kp LBRC  &kp RBRC  &kp LBKT  &kp RBKT  &kp LPAR     &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp UNDER
 &kp LSHFT  &kp LT    &kp GT    &kp LPAR  &kp RPAR  &kp EQUAL    &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS   &trans
 &kp LCTRL  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp N0           &kp N1  &kp N2  &kp N3  &kp KP_DOT    &trans
                                &kp LGUI  &trans    &kp SPACE    &kp RET          &mo 3   &kp RALT
@@ -48,7 +43,6 @@
 
         raise_layer {
             display-name = "RAI";
-            // Lado Der: Control de luces RGB (Brillo, Color, Efectos).
             bindings = <
 &kp TAB    &trans  &trans  &trans  &trans  &trans       &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LSHFT  &trans  &trans  &trans  &trans  &trans       &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &trans
@@ -59,9 +53,6 @@
 
         adjust_layer {
             display-name = "ADJ";
-            // SE ACTIVA CON LWR + RAI. 
-            // Mano IZQ: Macros de Copiar (W) y Pegar (E).
-            // Mano DER: Flechas (M=Izq, ,=Abajo, .=Arriba, /=Derecha).
             bindings = <
 &kp TAB    &trans     &m_copy    &m_paste   &trans     &trans       &trans    &trans    &trans    &trans     &trans     &kp BSPC
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans    &trans    &kp UP    &trans     &trans     &trans
