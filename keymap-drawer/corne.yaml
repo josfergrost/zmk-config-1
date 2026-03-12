@@ -14,8 +14,8 @@ layers:
   - '8'
   - '9'
   - '-'
-  - _
-  - $$mdi:apple-keyboard-shift$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - <
   - '>'
   - (
@@ -26,8 +26,8 @@ layers:
   - '5'
   - '6'
   - KP PLUS
-  - \
-  - $$mdi:apple-keyboard-control$$
+  - _
+  - {t: ▽, type: trans}
   - '!'
   - '@'
   - '#'
@@ -38,7 +38,7 @@ layers:
   - '2'
   - '3'
   - KP DOT
-  - '|'
+  - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - {type: held}
   - ␣
@@ -46,33 +46,33 @@ layers:
   - ADJ
   - $$mdi:apple-keyboard-option$$
   RAI:
+  - '~'
   - F1
   - F2
   - F3
   - F4
   - F5
-  - F11
   - ^
   - AMPS
   - '*'
   - (
   - )
-  - ⌦
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F6
   - F7
   - F8
   - F9
   - F10
-  - F12
   - {t: '$$mdi:led-on$$', h: '$$mdi:toggle-switch$$', s: '$$mdi:led-outline$$', type: toggle}
   - {t: '$$mdi:led-outline$$', s: '$$tabler:brightness-down$$', type: sym_by_sym}
   - {t: '$$mdi:led-on$$', s: '$$mdi:palette$$', type: sym_by_sym}
   - {t: '$$mdi:led-outline$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
   - {t: '$$mdi:led-on$$', h: '$$mdi:page-previous-outline$$', type: tap_dance}
-  - Insert
+  - \
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F11
+  - F12
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,7 +80,7 @@ layers:
   - Vol Down
   - Vol Up
   - ⏯
-  - {t: ▽, type: trans}
+  - '|'
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - ADJ
@@ -100,7 +100,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:backspace-outline$$
+  - {t: ▽, type: trans}
   - BT CLR
   - BT 1
   - BT 2
@@ -108,12 +108,12 @@ layers:
   - BT 4
   - BT 5
   - {t: ▽, type: trans}
-  - Home
-  - Page Down
-  - Page Up
-  - End
   - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-control$$
+  - ↑
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌦
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -122,8 +122,8 @@ layers:
   - {t: ▽, type: trans}
   - ←
   - ↓
-  - ↑
   - →
+  - Insert
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - {type: held}
