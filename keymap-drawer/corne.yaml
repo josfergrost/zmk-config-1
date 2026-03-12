@@ -1,9 +1,50 @@
 layout: {zmk_keyboard: corne}
 layers:
-  BAS: [↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-shift$$', A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-control$$',
-    Z, X, C, V, B, N, M, ',', ., /, Caps Lock, '$$mdi:apple-keyboard-command$$', LOW, ␣, ⏎, RAI, '$$mdi:apple-keyboard-option$$']
+  BAS:
+  - Caps Lock
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-shift$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - {t: ▽, type: trans}
+  - $$mdi:apple-keyboard-command$$
+  - LOW
+  - ␣
+  - ⏎
+  - RAI
+  - $$mdi:apple-keyboard-option$$
   LOW:
-  - ↹
+  - Esc
   - '{'
   - '}'
   - '['
