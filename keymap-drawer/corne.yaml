@@ -3,7 +3,7 @@ layers:
   BAS: [↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-shift$$', A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-control$$',
     Z, X, C, V, B, N, M, ',', ., /, Esc, '$$mdi:apple-keyboard-command$$', LOW, ␣, ⏎, RAI, '$$mdi:apple-keyboard-option$$']
   LOW:
-  - {t: ▽, type: trans}
+  - '`'
   - Caps Lock
   - '{'
   - '}'
@@ -26,7 +26,7 @@ layers:
   - '5'
   - '6'
   - KP PLUS
-  - {t: ▽, type: trans}
+  - \
   - $$mdi:apple-keyboard-control$$
   - '!'
   - '@'
@@ -38,7 +38,7 @@ layers:
   - '2'
   - '3'
   - KP DOT
-  - {t: ▽, type: trans}
+  - '|'
   - $$mdi:apple-keyboard-command$$
   - {type: held}
   - ␣
@@ -46,40 +46,40 @@ layers:
   - ADJ
   - $$mdi:apple-keyboard-option$$
   RAI:
-  - ↹
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F11
   - ^
   - AMPS
-  - KP MULTIPLY
+  - '*'
   - (
   - )
-  - $$mdi:backspace-outline$$
-  - $$mdi:apple-keyboard-shift$$
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ⌦
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F12
   - {t: '$$mdi:led-on$$', h: '$$mdi:toggle-switch$$', s: '$$mdi:led-outline$$', type: toggle}
   - {t: '$$mdi:led-outline$$', s: '$$tabler:brightness-down$$', type: sym_by_sym}
   - {t: '$$mdi:led-on$$', s: '$$mdi:palette$$', type: sym_by_sym}
   - {t: '$$mdi:led-outline$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
   - {t: '$$mdi:led-on$$', h: '$$mdi:page-previous-outline$$', type: tap_dance}
-  - {t: ▽, type: trans}
-  - $$mdi:apple-keyboard-control$$
-  - {t: ▽, type: trans}
+  - Insert
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - RGB COLOR HSB(120,100,50)
-  - {t: '$$mdi:led-on$$', s: '$$tabler:brightness-up$$', type: sym_by_sym}
-  - {t: '$$mdi:led-outline$$', s: '$$mdi:palette$$', type: sym_by_sym}
-  - {t: '$$mdi:led-on$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - MUTE
+  - Vol Down
+  - Vol Up
+  - ⏯
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
@@ -89,12 +89,12 @@ layers:
   - {type: held}
   - $$mdi:apple-keyboard-option$$
   ADJ:
-  - ↹
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&m_copy'
   - '&m_paste'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Print Scrn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -108,22 +108,22 @@ layers:
   - BT 4
   - BT 5
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ↑
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Home
+  - Page Down
+  - Page Up
+  - End
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-control$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - SLCK
+  - Pause Break
   - {t: ▽, type: trans}
   - ←
   - ↓
+  - ↑
   - →
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - $$mdi:apple-keyboard-command$$
   - {type: held}
