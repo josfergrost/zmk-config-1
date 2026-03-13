@@ -43,7 +43,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ADJ
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   RAI:
   - '~'
@@ -52,11 +52,11 @@ layers:
   - F3
   - F4
   - F5
-  - ^
-  - AMPS
-  - '*'
-  - (
-  - )
+  - Page Up
+  - Home
+  - ↑
+  - End
+  - Insert
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - F6
@@ -64,18 +64,18 @@ layers:
   - F8
   - F9
   - F10
-  - {t: '$$mdi:led-on$$', h: '$$mdi:toggle-switch$$', s: '$$mdi:led-outline$$', type: toggle}
-  - {t: '$$mdi:led-outline$$', s: '$$tabler:brightness-down$$', type: sym_by_sym}
-  - {t: '$$mdi:led-on$$', s: '$$mdi:palette$$', type: sym_by_sym}
-  - {t: '$$mdi:led-outline$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
-  - {t: '$$mdi:led-on$$', h: '$$mdi:page-previous-outline$$', type: tap_dance}
+  - Page Down
+  - ←
+  - ↓
+  - →
+  - ⌦
   - \
   - {t: ▽, type: trans}
   - F11
   - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ^
+  - AMPS
+  - '*'
   - MUTE
   - Vol Down
   - Vol Up
@@ -83,7 +83,7 @@ layers:
   - '|'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ADJ
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
@@ -91,8 +91,8 @@ layers:
   ADJ:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&m_copy'
-  - '&m_paste'
+  - Ctl+C
+  - Ctl+V
   - {t: ▽, type: trans}
   - Print Scrn
   - {t: ▽, type: trans}
@@ -107,12 +107,12 @@ layers:
   - BT 3
   - BT 4
   - BT 5
+  - {t: '$$mdi:led-on$$', h: '$$mdi:toggle-switch$$', s: '$$mdi:led-outline$$', type: toggle}
+  - {t: '$$mdi:led-outline$$', s: '$$tabler:brightness-down$$', type: sym_by_sym}
+  - {t: '$$mdi:led-on$$', s: '$$mdi:palette$$', type: sym_by_sym}
+  - {t: '$$mdi:led-outline$$', s: '$$mdi:eyedropper$$', type: sym_by_sym}
+  - {t: '$$mdi:led-on$$', h: '$$mdi:page-previous-outline$$', type: tap_dance}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ↑
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ⌦
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -120,10 +120,10 @@ layers:
   - SLCK
   - Pause Break
   - {t: ▽, type: trans}
-  - ←
-  - ↓
-  - →
-  - Insert
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
