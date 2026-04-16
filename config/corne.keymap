@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h> // Módulo de Ratón
 
 / {
     conditional_layers {
@@ -10,6 +11,25 @@
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
+        };
+    };
+
+    behaviors {
+        // Comportamiento de la N (Toque = N, Mantener = Ñ)
+        ht_n: hold_tap_n_enye {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <250>;
+            bindings = <&kp>, <&kp>;
+        };
+        
+        // Tap-Dance para el Ratón: 1 toque = ALT Derecho, 2 toques = Capa Ratón
+        td_mouse: tap_dance_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RALT>, <&tog 4>;
         };
     };
 
@@ -28,6 +48,13 @@
             tap-ms = <40>;
             bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp V>, <&macro_release &kp LCTRL>;
         };
+        m_sec: m_secuencia {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <15>;
+            bindings = <&kp N1 &kp Q &kp A &kp Z &kp X &kp S &kp W &kp N2 &kp DOT &kp MINUS>;
+        };
     };
 
     keymap {
@@ -35,12 +62,13 @@
 
         default_layer {
             display-name = "BAS";
+            // Fíjate en el último botón de abajo a la derecha: td_mouse
             bindings = <
 // ---- MANO IZQUIERDA ----                                   // ---- MANO DERECHA ----
 &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T               &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
 &kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G               &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B               &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE           &kp RET  &mo 2  &kp RALT
+&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B               &ht_n RA(N) N &kp M &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 1  &kp SPACE           &kp RET  &mo 2  &td_mouse
             >;
         };
 
@@ -57,25 +85,42 @@
 
         raise_layer {
             display-name = "RAI";
+            // Aquí viven tus teclas multimedia en la mano derecha (C_MUTE, C_VOL, C_PP)
             bindings = <
 // ---- MANO IZQUIERDA ----                                   // ---- MANO DERECHA ----
-&kp TILDE  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5     &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp INS   &trans
-&trans     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10    &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL   &kp BSLH
+&kp TILDE  &kp F1    &kp F2    &kp F3    &kp F4    &kp F5     &kp PG_UP  &kp HOME     &kp UP       &kp END  &kp INS   &trans
+&trans     &kp F6    &kp F7    &kp F8    &kp F9    &kp F10    &kp PG_DN  &kp LEFT     &kp DOWN     &kp RIGHT &kp DEL  &kp BSLH
 &trans     &kp F11   &kp F12   &kp CARET &kp AMPS  &kp STAR   &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PP &kp PIPE  &trans
-                               &trans    &trans    &trans     &trans     &trans    &trans
+                               &trans    &trans    &trans     &trans     &trans       &trans
             >;
         };
 
         adjust_layer {
             display-name = "ADJ";
-            // AGREGADO: &out OUT_TOG en la esquina inferior izquierda
+            // BOTÓN DE APAGADO (&soft_off) agregado en la esquina inferior derecha
             bindings = <
 // ---- MANO IZQUIERDA ----                                   // ---- MANO DERECHA ----
-&trans       &trans       &kp LC(C)    &kp LC(V)    &trans       &kp PSCRN       &trans           &trans           &trans           &trans           &trans           &trans
+&trans       &trans       &m_sec       &kp LC(C)    &kp LC(V)    &kp PSCRN       &trans           &trans           &trans           &trans           &trans           &trans
 &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &trans
-&out OUT_TOG &trans       &trans       &trans       &kp SLCK     &kp PAUSE_BREAK &trans           &trans           &trans           &trans           &trans           &trans
+&out OUT_TOG &trans       &trans       &trans       &kp SLCK     &kp PAUSE_BREAK &trans           &trans           &trans           &trans           &trans           &soft_off
                                            &trans       &trans       &trans          &trans           &trans           &trans
             >;
         };
+
+        mouse_layer {
+            display-name = "MSE";
+            // Esta es tu capa dedicada. Se apaga con un clic en el pulgar derecho (&tog 4)
+            bindings = <
+// ---- MANO IZQUIERDA ----                                   // ---- MANO DERECHA ----
+&trans &trans &trans &trans &trans &trans                     &msc SCRL_UP   &mkp LCLK       &mmv MOVE_UP    &mkp RCLK       &trans &trans
+&trans &trans &trans &trans &trans &trans                     &msc SCRL_DOWN &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans &trans
+&trans &trans &trans &trans &trans &trans                     &trans         &trans          &trans          &trans          &trans &trans
+                     &trans &trans &trans                     &trans         &trans          &tog 4
+            >;
+        };
     };
+};
+
+&led_strip {
+    chain-length = <27>;
 };

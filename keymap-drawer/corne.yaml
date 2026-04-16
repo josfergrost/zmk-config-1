@@ -1,7 +1,48 @@
 layout: {zmk_keyboard: corne}
 layers:
-  BAS: [↹, Q, W, E, R, T, Y, U, I, O, P, '$$mdi:backspace-outline$$', '$$mdi:apple-keyboard-shift$$', A, S, D, F, G, H, J, K, L, ;, '''', '$$mdi:apple-keyboard-control$$',
-    Z, X, C, V, B, N, M, ',', ., /, Esc, '$$mdi:apple-keyboard-command$$', LOW, ␣, ⏎, RAI, '$$mdi:apple-keyboard-option$$']
+  BAS:
+  - ↹
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - $$mdi:backspace-outline$$
+  - $$mdi:apple-keyboard-shift$$
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - $$mdi:apple-keyboard-control$$
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - {t: N, h: AltGr+N}
+  - M
+  - ','
+  - .
+  - /
+  - Esc
+  - $$mdi:apple-keyboard-command$$
+  - LOW
+  - ␣
+  - ⏎
+  - RAI
+  - '&td_mouse'
   LOW:
   - '`'
   - Caps Lock
@@ -91,9 +132,9 @@ layers:
   ADJ:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&m_sec'
   - Ctl+C
   - Ctl+V
-  - {t: ▽, type: trans}
   - Print Scrn
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -124,10 +165,53 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&soft_off'
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+  MSE:
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_UP'
+  - '&mkp LCLK'
+  - '&mmv MOVE_UP'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&msc SCRL_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: MSE, h: toggle}
